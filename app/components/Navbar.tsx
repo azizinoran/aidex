@@ -72,24 +72,25 @@ export default function Navbar() {
                     </li>
 
                     <li
-                      className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
-                      onMouseEnter={() => setOpenSub(true)}
-                      onMouseLeave={() => setOpenSub(false)}
-                    >
+  className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center"
+  onMouseEnter={() => setOpenSub(true)}
+  onMouseLeave={() => setOpenSub(false)}
+>
                       Staff Directory ▸
 
                       {openSub && (
-                        <div className="absolute top-[50%] -translate-y-[50%] left-full w-56 bg-white shadow-xl rounded">
+                        <div className="absolute top-0 left-full w-56 bg-white shadow-xl rounded">
 
-                          <div className="absolute left-[-6px] top-0 h-full w-2"></div>
+  {/* bridge no gap */}
+  <div className="absolute left-[-6px] top-0 h-full w-2"></div>
 
-                          <ul className="py-2 text-sm text-black">
-                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
-                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
-                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
-                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
-                          </ul>
-                        </div>
+  <ul className="py-2 text-sm text-black">
+    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
+    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
+    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
+    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
+  </ul>
+</div>
                       )}
                     </li>
 
