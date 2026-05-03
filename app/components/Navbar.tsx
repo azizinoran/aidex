@@ -79,7 +79,7 @@ export default function Navbar() {
                       Staff Directory ▸
 
                       {openSub && (
-                        <div className="absolute top-0 left-full w-56 bg-white shadow-xl rounded">
+                        <div className="absolute top-1/2 -translate-y-1/2 left-full w-56 bg-white shadow-xl rounded">
 
                           <div className="absolute left-[-8px] top-0 h-full w-2"></div>
 
