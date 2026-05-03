@@ -28,7 +28,7 @@ export default function Hero() {
       </video>
 
       {/* 🌑 OVERLAY (lebih smooth + gradient) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/20 to-black/90" />
 
       
       
@@ -107,20 +107,20 @@ export default function Hero() {
           </p>
 
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold tracking-widest bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <h3 className="text-xl font-semibold tracking-widest bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               OUR VISION
             </h3>
-            <p className="leading-relaxed">
+            <p className="text-lg leading-relaxed">
               Leading TVET education innovation by becoming a reference hub
               for AI and digital technology.
             </p>
           </div>
 
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold tracking-widest bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            <h3 className="text-xl font-semibold tracking-widest bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
               OUR MISSION
             </h3>
-            <p className="leading-relaxed">
+            <p className="text-lg leading-relaxed">
               Producing highly skilled and competitive graduates through the
               integration of AI in education, talent development, and
               industry collaboration.
