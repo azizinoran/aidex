@@ -33,7 +33,7 @@ export default function Navbar() {
       external: true,
     },
 
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/about Us" },
   ];
 
   return (

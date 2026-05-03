@@ -22,7 +22,7 @@ export default function Hero() {
           const video = e.currentTarget;
           video.play().catch(() => {});
         }}
-        className="absolute inset-0 w-full h-full object-cover brightness-140 contrast-130 saturate-120"
+        className="absolute inset-0 w-full h-full object-cover brightness-90 contrast-110 saturate-110"
       >
         <source src="/Hero.mp4" type="video/mp4" />
       </video>
