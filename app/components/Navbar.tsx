@@ -81,7 +81,7 @@ export default function Navbar() {
                       {openSub && (
                         <div className="absolute top-0 mt-[-8px] left-full ml-1 w-56 bg-white shadow-xl rounded">
 
-                          <div className="absolute left-[-8px] top-0 h-full w-2"></div>
+                          <div className="absolute left-[-6px] top-0 h-full w-2"></div>
 
                           <ul className="py-2 text-sm text-black">
                             <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
