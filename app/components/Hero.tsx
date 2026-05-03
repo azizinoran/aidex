@@ -22,16 +22,16 @@ export default function Hero() {
           const video = e.currentTarget;
           video.play().catch(() => {});
         }}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover brightness-140 contrast-130 saturate-120"
       >
         <source src="/Hero.mp4" type="video/mp4" />
       </video>
 
       {/* 🌑 OVERLAY (lebih smooth + gradient) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/10 to-black/80" />
 
-      {/* 🔁 FALLBACK (kalau video fail load) */}
-      <div className="absolute inset-0 bg-black -z-10" />
+      
+      
 
       {/* CONTENT */}
       <div className="relative z-10 w-full flex flex-col items-center">
