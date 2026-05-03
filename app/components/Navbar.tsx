@@ -22,22 +22,6 @@ export default function Navbar() {
     c.toLowerCase().includes(query.toLowerCase())
   );
 
-  const links = [
-    { name: "Home", path: "/" },
-    { name: "Courses", path: "/courses" },
-    { name: "Certifications", path: "/certifications" },
-    { name: "AI Tools", path: "/aitools" },
-
-    // ✅ FIXED HERE
-    {
-      name: "CertBoard",
-      path: "https://tinywebs.site/7bBsL3",
-      external: true,
-    },
-
-    { name: "About Us", path: "/about Us" },
-  ];
-
   return (
     <nav className="fixed w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -46,105 +30,82 @@ export default function Navbar() {
         <h1 className="text-white font-bold text-lg">AIDEx</h1>
 
         {/* NAV LINKS */}
-        <div className="hidden md:flex gap-6 text-sm text-gray-300">
-          <div className="hidden md:flex gap-6 text-sm text-gray-300">
+        <div className="hidden md:flex gap-6 text-sm text-gray-300 items-center">
 
-  {/* LOOP LINK BIASA */}
-  {links.map((link) => {
+          <Link href="/" className="hover:text-white">Home</Link>
+          <Link href="/courses" className="hover:text-white">Courses</Link>
+          <Link href="/certifications" className="hover:text-white">Certifications</Link>
+          <Link href="/aitools" className="hover:text-white">AI Tools</Link>
 
-    // ❌ SKIP About Us (kita handle custom)
-    if (link.name === "About Us") return null;
-
-    const isActive = pathname === link.path;
-
-    // EXTERNAL
-    if (link.external) {
-      return (
-        <a
-          key={link.name}
-          href={link.path}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative group"
-        >
-          <span className="hover:text-white flex items-center gap-1">
-            {link.name}
-            <span className="text-xs opacity-60">↗</span>
-          </span>
-          <span className="absolute left-0 -bottom-1 h-[2px] bg-blue-400 w-0 group-hover:w-full transition-all duration-300" />
-        </a>
-      );
-    }
-
-    // INTERNAL
-    return (
-      <Link key={link.name} href={link.path} className="relative group">
-        <span className={`transition ${isActive ? "text-white" : "hover:text-white"}`}>
-          {link.name}
-        </span>
-        <span className={`absolute left-0 -bottom-1 h-[2px] bg-blue-400 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"}`} />
-      </Link>
-    );
-  })}
-
-  {/* 🔥 ABOUT US DROPDOWN */}
-  <div
-    className="relative"
-    onMouseEnter={() => setOpenAbout(true)}
-    onMouseLeave={() => {
-      setOpenAbout(false);
-      setOpenSub(false);
-    }}
-  >
-    <span className="cursor-pointer hover:text-white">About Us ▾</span>
-
-    {openAbout && (
-      <div className="absolute top-full left-0 mt-2 w-64 bg-white text-black rounded shadow-lg">
-
-        <ul className="py-2 text-sm">
-
-          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-            Welcome Message
-          </li>
-
-          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-            Vision & Mission
-          </li>
-
-          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-            Organisation Chart
-          </li>
-
-          {/* SUBMENU */}
-          <li
-            className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
-            onMouseEnter={() => setOpenSub(true)}
-            onMouseLeave={() => setOpenSub(false)}
+          <a
+            href="https://tinywebs.site/7bBsL3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
           >
-            Staff Directory ▸
+            CertBoard ↗
+          </a>
 
-            {openSub && (
-              <div className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded">
+          {/* 🔥 ABOUT US DROPDOWN */}
+          <div
+            className="relative"
+            onMouseEnter={() => setOpenAbout(true)}
+            onMouseLeave={() => {
+              setOpenAbout(false);
+              setOpenSub(false);
+            }}
+          >
+            <span className="cursor-pointer hover:text-white">
+              About Us ▾
+            </span>
+
+            {openAbout && (
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+
                 <ul className="py-2 text-sm">
-                  <li className="px-4 py-2 hover:bg-gray-100">Management Staff</li>
-                  <li className="px-4 py-2 hover:bg-gray-100">Creative Multimedia</li>
-                  <li className="px-4 py-2 hover:bg-gray-100">Development & Technology</li>
-                  <li className="px-4 py-2 hover:bg-gray-100">Supportive Staff</li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Welcome Message
+                  </li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Vision & Mission
+                  </li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Organisation Chart
+                  </li>
+
+                  {/* SUBMENU */}
+                  <li
+                    className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    onMouseEnter={() => setOpenSub(true)}
+                    onMouseLeave={() => setOpenSub(false)}
+                  >
+                    Staff Directory ▸
+
+                    {openSub && (
+                      <div className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded">
+                        <ul className="py-2 text-sm">
+                          <li className="px-4 py-2 hover:bg-gray-100">Management Staff</li>
+                          <li className="px-4 py-2 hover:bg-gray-100">Creative Multimedia</li>
+                          <li className="px-4 py-2 hover:bg-gray-100">Development & Technology</li>
+                          <li className="px-4 py-2 hover:bg-gray-100">Support Staff</li>
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Our Facilities
+                  </li>
+
                 </ul>
+
               </div>
             )}
-          </li>
+          </div>
 
-          <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-            Our Facilities
-          </li>
-
-        </ul>
-      </div>
-    )}
-  </div>
-
-</div>
         </div>
 
         {/* RIGHT SIDE */}
