@@ -59,20 +59,20 @@ export default function Navbar() {
 
                   <ul className="py-2 text-sm">
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Welcome Message
                     </li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Vision & Mission
                     </li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Organisation Chart
                     </li>
 
                     <li
-                      className="relative px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+                      className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
                       onMouseEnter={() => setOpenSub(true)}
                       onMouseLeave={() => setOpenSub(false)}
                     >
@@ -84,16 +84,16 @@ export default function Navbar() {
                           <div className="absolute left-[-8px] top-0 h-full w-2"></div>
 
                           <ul className="py-2 text-sm">
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
+                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
+                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
+                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
+                            <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
                           </ul>
                         </div>
                       )}
                     </li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Our Facilities
                     </li>
 
