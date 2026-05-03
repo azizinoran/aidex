@@ -1,14 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Navbar() {
   const [query, setQuery] = useState("");
   const [openAbout, setOpenAbout] = useState(false);
   const [openSub, setOpenSub] = useState(false);
-  const pathname = usePathname();
 
   const courses = [
     "Introduction to AI",
@@ -29,7 +27,7 @@ export default function Navbar() {
         {/* LOGO */}
         <h1 className="text-white font-bold text-lg">AIDEx</h1>
 
-        {/* NAV LINKS */}
+        {/* NAV */}
         <div className="hidden md:flex gap-6 text-sm text-gray-300 items-center">
 
           <Link href="/" className="hover:text-white">Home</Link>
@@ -40,15 +38,14 @@ export default function Navbar() {
           <a
             href="https://tinywebs.site/7bBsL3"
             target="_blank"
-            rel="noopener noreferrer"
             className="hover:text-white"
           >
             CertBoard ↗
           </a>
 
-          {/* 🔥 ABOUT US DROPDOWN */}
+          {/* 🔥 ABOUT DROPDOWN */}
           <div
-            className="relative"
+            className="relative pb-2"
             onMouseEnter={() => setOpenAbout(true)}
             onMouseLeave={() => {
               setOpenAbout(false);
@@ -60,50 +57,61 @@ export default function Navbar() {
             </span>
 
             {openAbout && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white text-black rounded shadow-lg z-50">
+              <div className="absolute top-full left-0 w-64 z-50">
 
-                <ul className="py-2 text-sm">
+                {/* invisible bridge */}
+                <div className="h-2"></div>
 
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Welcome Message
-                  </li>
+                <div className="bg-white text-black rounded shadow-lg">
 
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Vision & Mission
-                  </li>
+                  <ul className="py-2 text-sm">
 
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Organisation Chart
-                  </li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Welcome Message
+                    </li>
 
-                  {/* SUBMENU */}
-                  <li
-                    className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                    onMouseEnter={() => setOpenSub(true)}
-                    onMouseLeave={() => setOpenSub(false)}
-                  >
-                    Staff Directory ▸
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Vision & Mission
+                    </li>
 
-                    {openSub && (
-                      <div className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded">
-                        <ul className="py-2 text-sm">
-                          <li className="px-4 py-2 hover:bg-gray-100">Management Staff</li>
-                          <li className="px-4 py-2 hover:bg-gray-100">Creative Multimedia</li>
-                          <li className="px-4 py-2 hover:bg-gray-100">Development & Technology</li>
-                          <li className="px-4 py-2 hover:bg-gray-100">Support Staff</li>
-                        </ul>
-                      </div>
-                    )}
-                  </li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Organisation Chart
+                    </li>
 
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Our Facilities
-                  </li>
+                    {/* 🔥 SUBMENU */}
+                    <li
+                      className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      onMouseEnter={() => setOpenSub(true)}
+                      onMouseLeave={() => setOpenSub(false)}
+                    >
+                      Staff Directory ▸
 
-                </ul>
+                      {openSub && (
+                        <div className="absolute top-0 left-full w-56 bg-white shadow-lg rounded">
 
+                          {/* bridge kanan */}
+                          <div className="absolute left-[-8px] top-0 h-full w-2"></div>
+
+                          <ul className="py-2 text-sm">
+                            <li className="px-4 py-2 hover:bg-gray-100">Management Staff</li>
+                            <li className="px-4 py-2 hover:bg-gray-100">Creative Multimedia</li>
+                            <li className="px-4 py-2 hover:bg-gray-100">Development & Technology</li>
+                            <li className="px-4 py-2 hover:bg-gray-100">Support Staff</li>
+                          </ul>
+                        </div>
+                      )}
+                    </li>
+
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Our Facilities
+                    </li>
+
+                  </ul>
+
+                </div>
               </div>
             )}
+
           </div>
 
         </div>
@@ -113,7 +121,6 @@ export default function Navbar() {
 
           {/* SEARCH */}
           <div className="relative hidden md:block">
-
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -121,7 +128,6 @@ export default function Navbar() {
               className="bg-white/5 border border-white/10 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-blue-500 w-64"
             />
 
-            {/* DROPDOWN */}
             {query && (
               <div className="absolute top-12 w-full bg-[#0F172A] border border-white/10 rounded-xl shadow-lg z-50">
                 {filtered.length > 0 ? (
@@ -140,15 +146,12 @@ export default function Navbar() {
                 )}
               </div>
             )}
-
           </div>
 
-          {/* LOGIN */}
           <button className="hidden md:block text-sm text-gray-300 hover:text-white">
             Login
           </button>
 
-          {/* JOIN */}
           <button className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-sm shadow-lg hover:scale-105 transition">
             Join Now
           </button>
