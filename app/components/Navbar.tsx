@@ -62,25 +62,25 @@ export default function Navbar() {
                 {/* invisible bridge */}
                 <div className="h-2"></div>
 
-                <div className="bg-white text-black rounded shadow-lg">
+                <div className="bg-white text-black rounded shadow-xl">
 
                   <ul className="py-2 text-sm">
 
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    <li className="px-4 py-2 hover:bg-gray-100 transition">
                       Welcome Message
                     </li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    <li className="px-4 py-2 hover:bg-gray-100 transition">
                       Vision & Mission
                     </li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    <li className="px-4 py-2 hover:bg-gray-100 transition">
                       Organisation Chart
                     </li>
 
                     {/* 🔥 SUBMENU */}
                     <li
-                      className="relative px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      className="relative px-4 py-2 hover:bg-gray-100 transition"
                       onMouseEnter={() => setOpenSub(true)}
                       onMouseLeave={() => setOpenSub(false)}
                     >
@@ -93,16 +93,16 @@ export default function Navbar() {
                           <div className="absolute left-[-8px] top-0 h-full w-2"></div>
 
                           <ul className="py-2 text-sm">
-                            <li className="px-4 py-2 hover:bg-gray-100">Management Staff</li>
-                            <li className="px-4 py-2 hover:bg-gray-100">Creative Multimedia</li>
-                            <li className="px-4 py-2 hover:bg-gray-100">Development & Technology</li>
-                            <li className="px-4 py-2 hover:bg-gray-100">Support Staff</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 transition">Management Staff</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 transition">Creative Multimedia</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 transition">Development & Technology</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 transition">Support Staff</li>
                           </ul>
                         </div>
                       )}
                     </li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-blue-600 transition cursor-pointer">
                       Our Facilities
                     </li>
 
