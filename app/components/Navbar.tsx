@@ -83,7 +83,7 @@ export default function Navbar() {
 
                           <div className="absolute left-[-8px] top-0 h-full w-2"></div>
 
-                          <ul className="py-2 text-sm">
+                          <ul className="py-2 text-sm text-black">
                             <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
                             <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
                             <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
