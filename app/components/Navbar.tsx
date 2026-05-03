@@ -70,9 +70,17 @@ export default function Navbar() {
                     <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Organisation Chart
                     </li>
-                    
+
                     <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Our Facilities
+                    </li>
+
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      AIDEx Prompters
+                    </li>
+
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      OWLx Prompters
                     </li>
 
                     <li
