@@ -19,13 +19,13 @@ export default function Navbar() {
 
     <defs>
       <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#3B82F6">
+        <stop offset="0%" stopColor="#993bf6">
           <animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite"/>
         </stop>
-        <stop offset="50%" stopColor="#22D3EE">
+        <stop offset="50%" stopColor="#22ee88">
           <animate attributeName="offset" values="0.5;1.5;0.5" dur="5s" repeatCount="indefinite"/>
         </stop>
-        <stop offset="100%" stopColor="#3B82F6">
+        <stop offset="100%" stopColor="#3bf0f6">
           <animate attributeName="offset" values="1;2;1" dur="5s" repeatCount="indefinite"/>
         </stop>
       </linearGradient>
