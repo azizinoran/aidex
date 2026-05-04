@@ -7,6 +7,7 @@ export default function Navbar() {
   const [query, setQuery] = useState("");
   const [openAbout, setOpenAbout] = useState(false);
   const [openSub, setOpenSub] = useState(false);
+  const [openAITools, setOpenAITools] = useState(false);
 
   const courses = [
     "Introduction to AI",
@@ -31,24 +32,37 @@ export default function Navbar() {
           <Link href="/" className="hover:text-white">Home</Link>
           <Link href="/courses" className="hover:text-white">Courses</Link>
           <Link href="/certifications" className="hover:text-white">Certifications</Link>
-          <div className="relative group">
-  <span className="cursor-pointer hover:text-white">
-    AI Tools ▾
-  </span>
 
-  <div className="absolute hidden group-hover:block top-full mt-2 w-56 bg-white text-black rounded shadow-lg">
+          {/* 🔥 AI TOOLS (FIXED) */}
+          <div
+            className="relative pb-2"
+            onMouseEnter={() => setOpenAITools(true)}
+            onMouseLeave={() => setOpenAITools(false)}
+          >
+            <span className="cursor-pointer hover:text-white">
+              AI Tools ▾
+            </span>
 
-    <a
-      href="https://gemini.google.com/gem/xxxxxxx"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block px-4 py-2 hover:bg-gray-100"
-    >
-      AIDEx AppForge AI
-    </a>
+            {openAITools && (
+              <div className="absolute top-full left-0 w-56 z-50">
 
-  </div>
-</div>
+                <div className="h-2"></div>
+
+                <div className="bg-white text-black rounded shadow-xl">
+
+                  <a
+                    href="https://gemini.google.com/gem/xxxxxxx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+                  >
+                    AIDEx AppForge AI
+                  </a>
+
+                </div>
+              </div>
+            )}
+          </div>
 
           <a href="https://tinywebs.site/7bBsL3" target="_blank" className="hover:text-white">
             CertBoard ↗
@@ -100,30 +114,29 @@ export default function Navbar() {
                       OWLx Prompters
                     </li>
 
+                    {/* SUBMENU */}
                     <li
-  className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center"
-  onMouseEnter={() => setOpenSub(true)}
-  onMouseLeave={() => setOpenSub(false)}
->
+                      className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center"
+                      onMouseEnter={() => setOpenSub(true)}
+                      onMouseLeave={() => setOpenSub(false)}
+                    >
                       Staff Directory ▸
 
                       {openSub && (
                         <div className="absolute top-0 left-full w-56 bg-white shadow-xl rounded">
 
-  {/* bridge no gap */}
-  <div className="absolute left-[-6px] top-0 h-full w-2"></div>
+                          <div className="absolute left-[-6px] top-0 h-full w-2"></div>
 
-  <ul className="py-2 text-sm text-black">
-    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
-    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
-    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
-    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
-  </ul>
-</div>
+                          <ul className="py-2 text-sm text-black">
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
+                          </ul>
+
+                        </div>
                       )}
                     </li>
-
-                    
 
                   </ul>
 
