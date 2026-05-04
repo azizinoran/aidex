@@ -54,8 +54,8 @@ export default function Navbar() {
 
     <text
       x="10"
-      y="40"
-      fontSize="34"
+      y="48"
+      fontSize="48"
       fontWeight="700"
       fill="url(#flowGrad)"
       filter="url(#glow)"
