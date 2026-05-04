@@ -31,7 +31,24 @@ export default function Navbar() {
           <Link href="/" className="hover:text-white">Home</Link>
           <Link href="/courses" className="hover:text-white">Courses</Link>
           <Link href="/certifications" className="hover:text-white">Certifications</Link>
-          <Link href="/aitools" className="hover:text-white">AI Tools</Link>
+          <div className="relative group">
+  <span className="cursor-pointer hover:text-white">
+    AI Tools ▾
+  </span>
+
+  <div className="absolute hidden group-hover:block top-full mt-2 w-56 bg-white text-black rounded shadow-lg">
+
+    <a
+      href="https://gemini.google.com/gem/xxxxxxx"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block px-4 py-2 hover:bg-gray-100"
+    >
+      AIDEx AppForge AI
+    </a>
+
+  </div>
+</div>
 
           <a href="https://tinywebs.site/7bBsL3" target="_blank" className="hover:text-white">
             CertBoard ↗
