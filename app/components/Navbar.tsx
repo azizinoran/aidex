@@ -59,23 +59,46 @@ export default function Navbar() {
               setOpenSub(false);
             }}
           >
-            <span className="flex items-center gap-1 whitespace-nowrap cursor-pointer hover:text-white">
-              About Us <span className="text-xs">▾</span>
+            <span className="cursor-pointer hover:text-white">
+              About Us ▾
             </span>
 
             {openAbout && (
-              <div className="absolute top-full left-0 mt-2 w-64 z-[999]">
-                <div className="bg-white text-black rounded-xl shadow-2xl border border-gray-200">
+              <div className="absolute top-full left-0 w-64 z-50">
+
+                <div className="h-2"></div>
+
+                <div className="bg-white text-black rounded shadow-xl">
+
                   <ul className="py-2 text-sm">
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Welcome Message</li>
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Vision & Mission</li>
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Organisation Chart</li>
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">AIDEx Prompters</li>
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">OWLx Prompters</li>
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      Welcome Message
+                    </li>
 
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      Vision & Mission
+                    </li>
+
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      Organisation Chart
+                    </li>
+
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      Our Facilities
+                    </li>
+
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      AIDEx Prompters
+                    </li>
+
+                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                      OWLx Prompters
+                    </li>
+
+                    {/* SUBMENU */}
                     <li
-                      className="relative px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 flex justify-between"
+                      className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center"
                       onMouseEnter={() => setOpenSub(true)}
                       onMouseLeave={() => setOpenSub(false)}
                     >
