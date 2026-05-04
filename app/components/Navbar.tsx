@@ -82,12 +82,15 @@ export default function Navbar() {
                       Staff Directory <span>▸</span>
 
                       {openSub && (
-                        <div className="absolute top-0 left-full ml-1 w-56 bg-white border border-gray-200 shadow-2xl rounded-xl">
-                          <ul className="py-2 text-sm">
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Management Staff</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Creative Multimedia</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Development & Technology</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Support Staff</li>
+                        <div className="absolute top-0 left-full w-56 bg-white shadow-xl rounded">
+
+                          <div className="absolute left-[-6px] top-0 h-full w-2"></div>
+
+                          <ul className="py-2 text-sm text-black">
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
+                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
                           </ul>
                         </div>
                       )}
