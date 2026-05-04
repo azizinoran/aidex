@@ -15,31 +15,40 @@ export default function Navbar() {
 
         {/* LOGO */}
         <div className="h-10 flex items-center">
-          <svg viewBox="0 0 220 60" className="h-8">
-            <defs>
-              <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#3B82F6"/>
-                <stop offset="50%" stopColor="#22D3EE"/>
-                <stop offset="100%" stopColor="#3B82F6"/>
-              </linearGradient>
+  <svg viewBox="0 0 220 60" className="h-8">
 
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="4" result="blur"/>
-                <feMerge>
-                  <feMergeNode in="blur"/>
-                  <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-              </filter>
-            </defs>
+    <defs>
+      <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#3B82F6">
+          <animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+        </stop>
+        <stop offset="50%" stopColor="#22D3EE">
+          <animate attributeName="offset" values="0.5;1.5;0.5" dur="5s" repeatCount="indefinite"/>
+        </stop>
+        <stop offset="100%" stopColor="#3B82F6">
+          <animate attributeName="offset" values="1;2;1" dur="5s" repeatCount="indefinite"/>
+        </stop>
+      </linearGradient>
 
-            <text
-              x="10"
-              y="48"
-              fontSize="48"
-              fontWeight="700"
-              fill="url(#flowGrad)"
-              filter="url(#glow)"
-            >
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="2" result="blur">
+          <animate attributeName="stdDeviation" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
+        </feGaussianBlur>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+
+    <text
+      x="10"
+      y="48"
+      fontSize="48"
+      fontWeight="700"
+      fill="url(#flowGrad)"
+      filter="url(#glow)"
+    >
               AIDEx
             </text>
           </svg>
