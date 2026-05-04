@@ -46,12 +46,14 @@ export default function Navbar() {
             {openAITools && (
               <div className="absolute top-full left-0 w-56 z-50">
 
-                <div className="h-2"></div>
+                {/* invisible hover bridge */}
+                <div className="absolute top-[-8px] left-0 w-full h-2"></div>
 
                 <div className="bg-white text-black rounded shadow-xl">
 
+                
                   <a
-                    href="https://gemini.google.com/gem/xxxxxxx"
+                    href="https://gemini.google.com/gem/1jRl4IIIlvR1MnoVSP_3XoIrOkeFR8Dry?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
