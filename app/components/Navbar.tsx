@@ -214,8 +214,8 @@ export default function Navbar() {
             )}
           </div>
 
-          <button className="hidden md:block text-sm text-gray-300 hover:text-white">
-            Login
+          <button className="hidden md:block text-sm text-gray-300 hover:text-white transition">
+            Sign In <span className="text-xs text-cyan-400 animate-pulse">(Beta)</span>
           </button>
 
           <button className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-sm shadow-lg hover:scale-105 transition">
