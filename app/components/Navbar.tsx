@@ -10,8 +10,8 @@ export default function Navbar() {
   const [openAITools, setOpenAITools] = useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="fixed w-full z-[999] bg-black/60 backdrop-blur-xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
         {/* LOGO */}
         <div className="h-10 flex items-center">
@@ -23,9 +23,8 @@ export default function Navbar() {
                 <stop offset="100%" stopColor="#3B82F6"/>
               </linearGradient>
 
-              {/* 🔥 GLOW BACK */}
               <filter id="glow">
-                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feGaussianBlur stdDeviation="4" result="blur"/>
                 <feMerge>
                   <feMergeNode in="blur"/>
                   <feMergeNode in="SourceGraphic"/>
@@ -47,7 +46,7 @@ export default function Navbar() {
         </div>
 
         {/* NAV */}
-        <div className="hidden md:flex gap-6 text-sm text-gray-300 items-center h-10">
+        <div className="hidden md:flex gap-5 text-sm text-gray-300 items-center h-10">
 
           <Link href="/" className="hover:text-white">Home</Link>
 
@@ -60,49 +59,30 @@ export default function Navbar() {
               setOpenSub(false);
             }}
           >
-            <span className="flex items-center gap-1 whitespace-nowrap leading-none h-full cursor-pointer hover:text-white">
+            <span className="flex items-center gap-1 whitespace-nowrap cursor-pointer hover:text-white">
               About Us <span className="text-xs">▾</span>
             </span>
 
             {openAbout && (
-              <div className="absolute top-full left-0 w-64 z-50">
-                <div className="absolute top-[-6px] left-0 w-full h-2"></div>
-
-                <div className="bg-white text-black rounded shadow-xl">
+              <div className="absolute top-full left-0 mt-2 w-64 z-[999]">
+                <div className="bg-white text-black rounded-xl shadow-2xl border border-gray-200">
                   <ul className="py-2 text-sm">
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
-                      Welcome Message
-                    </li>
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Welcome Message</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Vision & Mission</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Organisation Chart</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">AIDEx Prompters</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">OWLx Prompters</li>
 
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
-                      Vision & Mission
-                    </li>
-
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
-                      Organisation Chart
-                    </li>
-
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
-                      AIDEx Prompters
-                    </li>
-
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
-                      OWLx Prompters
-                    </li>
-
-                    {/* SUBMENU */}
                     <li
-                      className="relative px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 flex items-center justify-between cursor-pointer"
+                      className="relative px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 flex justify-between"
                       onMouseEnter={() => setOpenSub(true)}
                       onMouseLeave={() => setOpenSub(false)}
                     >
                       Staff Directory <span>▸</span>
 
                       {openSub && (
-                        <div className="absolute top-0 left-full w-56 bg-white shadow-xl rounded">
-                          <div className="absolute left-[-6px] top-0 h-full w-2"></div>
-
+                        <div className="absolute top-0 left-full ml-1 w-56 bg-white border border-gray-200 shadow-2xl rounded-xl">
                           <ul className="py-2 text-sm">
                             <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Management Staff</li>
                             <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500">Creative Multimedia</li>
@@ -140,10 +120,8 @@ export default function Navbar() {
             </span>
 
             {openAITools && (
-              <div className="absolute top-full left-0 w-56 z-50">
-                <div className="absolute top-[-6px] left-0 w-full h-2"></div>
-
-                <div className="bg-white text-black rounded shadow-xl">
+              <div className="absolute top-full left-0 mt-2 w-56 z-[999]">
+                <div className="bg-white text-black rounded-xl shadow-2xl border border-gray-200">
                   <a
                     href="https://gemini.google.com/gem/1jRl4IIIlvR1MnoVSP_3XoIrOkeFR8Dry?usp=sharing"
                     target="_blank"
@@ -158,11 +136,7 @@ export default function Navbar() {
           </div>
 
           {/* CERTBOARD */}
-          <a
-            href="https://tinywebs.site/7bBsL3"
-            target="_blank"
-            className="flex items-center gap-1 whitespace-nowrap hover:text-white"
-          >
+          <a href="https://tinywebs.site/7bBsL3" target="_blank" className="flex items-center gap-1 whitespace-nowrap hover:text-white">
             CertBoard <span className="text-xs">↗</span>
           </a>
 
@@ -178,10 +152,10 @@ export default function Navbar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="What do you want to learn?"
-            className="hidden md:block bg-white/5 border border-white/10 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-blue-500 w-52"
+            className="hidden md:block bg-white/5 border border-white/10 text-sm px-3 py-2 rounded-full w-40 focus:outline-none focus:border-blue-500"
           />
 
-          <button className="flex items-center gap-1 whitespace-nowrap cursor-pointer hover:text-white">
+          <button className="flex items-center gap-1 whitespace-nowrap hover:text-white">
             Sign In <span className="text-xs text-cyan-400 animate-pulse">(Beta)</span>
           </button>
 
