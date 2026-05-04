@@ -30,7 +30,7 @@ export default function Navbar() {
         </div>
 
         {/* NAV */}
-        <div className="hidden md:flex gap-6 text-sm text-gray-300 items-center">
+        <div className="hidden md:flex gap-6 text-sm text-gray-300 items-center h-10">
 
           <Link href="/" className="hover:text-white">Home</Link>
 
@@ -43,7 +43,7 @@ export default function Navbar() {
               setOpenSub(false);
             }}
           >
-            <span className="flex items-center gap-1 cursor-pointer hover:text-white">
+            <span className="flex items-center gap-1 h-full cursor-pointer hover:text-white">
               About Us <span className="text-xs">▾</span>
             </span>
 
@@ -147,7 +147,7 @@ export default function Navbar() {
             className="hidden md:block bg-white/5 border border-white/10 text-sm px-4 py-2 rounded-full focus:outline-none focus:border-blue-500 w-64"
           />
 
-          <button className="hidden md:flex items-center gap-1 text-sm text-gray-300 hover:text-white">
+          <button className="hidden md:flex items-center gap-1 h-10 text-sm text-gray-300 hover:text-white">
             Sign In <span className="text-xs text-cyan-400 animate-pulse">(Beta)</span>
           </button>
 
