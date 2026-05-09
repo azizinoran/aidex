@@ -98,7 +98,7 @@ export default function Navbar() {
                     </li>
 
                     <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
-                      AIDEx Prompters
+                      AIDEx Prompters Community
                     </li>
 
                     <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
