@@ -103,7 +103,7 @@ export default function AIDExPromptersCommunityPage() {
           <a
             href="https://chat.whatsapp.com/"
             target="_blank"
-            className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:scale-105 transition px-10 py-4 rounded-2xl text-lg font-semibold shadow-2xl"
+            rel="noopener noreferrer"
           >
             🚀 Join WhatsApp Community
           </a>
