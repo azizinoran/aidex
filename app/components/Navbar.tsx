@@ -97,6 +97,12 @@ export default function Navbar() {
                       Our Facilities
                     </li>
 
+                    <Link href="/aidex-prompters-community">
+                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
+                     AIDEx Prompters Community 
+                    </li>
+                    </Link>
+
                     <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       AIDEx Prompters Community
                     </li>
