@@ -106,14 +106,14 @@ export default function AIDExPromptersCommunityPage() {
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 hover:scale-105 transition px-10 py-4 rounded-2xl text-lg font-semibold shadow-2xl"            
           >
-            🚀 Join WhatsApp Community
+            🚀 Join AIDEx WhatsApp Community
           </a>
           <div className="mt-5">
           <a
             href="https://discord.gg/GTvEpRuf"
             className="inline-block bg-[#5865F2] hover:bg-[#4752C4] hover:scale-105 transition px-10 py-4 rounded-2xl text-lg font-semibold shadow-2xl"
             >
-              🎮 Join Discord Community
+              🎮 Join AIDEx Discord Community
           </a>
           </div>
 
