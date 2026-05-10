@@ -19,74 +19,73 @@ export default function AIDExPromptersCommunityPage() {
         </div>
 
         {/* FEATURES */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
+        {/* FUTURISTIC COMMUNITY SECTION */}
+<div className="relative flex items-center justify-center min-h-[900px] mb-24 overflow-hidden">
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-lg hover:border-cyan-400 transition hover:-translate-y-1">
+  {/* Background Glow */}
+  <div className="absolute w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
 
-            <div className="text-4xl mb-4">🤖</div>
+  {/* CENTER GLOBE */}
+  <div className="relative z-10 w-[350px] h-[350px] rounded-full border border-cyan-400/30 bg-white/5 backdrop-blur-xl flex items-center justify-center shadow-[0_0_80px_rgba(34,211,238,0.25)]">
 
-            <h2 className="text-2xl font-bold mb-3 text-cyan-400">
-              AI Prompt Sharing
-            </h2>
+    <div className="absolute inset-0 rounded-full border border-cyan-400/20 animate-pulse"></div>
 
-            <p className="text-gray-400">
-              Discover and share powerful prompts for ChatGPT, Gemini,
-              automation tools, image generation, and more.
-            </p>
+    <div className="text-center px-8">
+      <h1 className="text-5xl font-extrabold leading-tight text-white mb-4">
+        AIDEx <br />
+        <span className="text-cyan-400">Prompters</span> <br />
+        Community
+      </h1>
 
-          </div>
+      <p className="text-gray-300 text-sm leading-relaxed">
+        A collaborative AI community for PMM students and staff
+        to explore prompt engineering, AI tools, automation,
+        and future-ready digital innovation together.
+      </p>
+    </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-lg hover:border-blue-400 transition hover:-translate-y-1">
+  </div>
 
-            <div className="text-4xl mb-4">🚀</div>
+  {/* TOP LEFT */}
+  <div className="absolute top-[5%] left-[18%] circle-btn">
+    <div className="text-5xl">🤖</div>
+    <h2>AI Prompt Sharing</h2>
+  </div>
 
-            <h2 className="text-2xl font-bold mb-3 text-blue-400">
-              Workshops & Activities
-            </h2>
+  {/* TOP RIGHT */}
+  <div className="absolute top-[5%] right-[18%] circle-btn">
+    <div className="text-5xl">🚀</div>
+    <h2>Workshops & Activities</h2>
+  </div>
 
-            <p className="text-gray-400">
-              Participate in AI sharing sessions, webinars, competitions,
-              and digital innovation activities organised by AIDEx.
-            </p>
+  {/* LEFT */}
+  <div className="absolute left-[8%] top-[38%] circle-btn purple">
+    <div className="text-5xl">🌐</div>
+    <h2>Networking & Collaboration</h2>
+  </div>
 
-          </div>
+  {/* RIGHT */}
+  <div className="absolute right-[8%] top-[38%] circle-btn">
+    <div className="text-5xl">👥</div>
+    <h2>Community Members</h2>
+    <p className="stat">500+</p>
+  </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-lg hover:border-purple-400 transition hover:-translate-y-1">
+  {/* BOTTOM LEFT */}
+  <div className="absolute bottom-[5%] left-[18%] circle-btn">
+    <div className="text-5xl">🧠</div>
+    <h2>AI Workshops</h2>
+    <p className="stat">20+</p>
+  </div>
 
-            <div className="text-4xl mb-4">🌐</div>
+  {/* BOTTOM RIGHT */}
+  <div className="absolute bottom-[5%] right-[18%] circle-btn purple">
+    <div className="text-5xl">💬</div>
+    <h2>Shared Prompts</h2>
+    <p className="stat">1000+</p>
+  </div>
 
-            <h2 className="text-2xl font-bold mb-3 text-purple-400">
-              Networking & Collaboration
-            </h2>
-
-            <p className="text-gray-400">
-              Connect with students, educators, and AI enthusiasts
-              to build future-ready skills together.
-            </p>
-
-          </div>
-
-        </div>
-
-        {/* STATS */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20 text-center">
-
-          <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-            <h3 className="text-4xl font-bold text-cyan-400 mb-2">500+</h3>
-            <p className="text-gray-400">Community Members</p>
-          </div>
-
-          <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-            <h3 className="text-4xl font-bold text-blue-400 mb-2">20+</h3>
-            <p className="text-gray-400">AI Workshops</p>
-          </div>
-
-          <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-            <h3 className="text-4xl font-bold text-purple-400 mb-2">1000+</h3>
-            <p className="text-gray-400">Shared Prompts</p>
-          </div>
-
-        </div>
+</div>
 
         {/* JOIN */}
         <div className="text-center">
