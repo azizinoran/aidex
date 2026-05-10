@@ -17,13 +17,13 @@ export default function AIDExPromptersCommunityPage() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-45"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-65"
       >
         <source src="/videos/community-bg.mp4" type="video/mp4" />
       </video>
 
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/45 z-0"></div>
+      <div className="absolute inset-0 bg-black/20 z-0"></div>
 
       {/* WEBSITE CONTENT */}
       <div className="relative z-10 min-h-screen px-6 py-20">

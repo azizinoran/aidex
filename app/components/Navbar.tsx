@@ -62,61 +62,81 @@ export default function Navbar() {
           {/* ABOUT */}
           <div
             className="relative"
-            onMouseEnter={() => setOpenAbout(true)}
-            onMouseLeave={() => {
-              setOpenAbout(false);
-              setOpenSub(false);
-            }}
+onMouseEnter={() => setOpenAbout(true)}
+
+onMouseLeave={() => {
+  setTimeout(() => {
+    setOpenAbout(false);
+    setOpenSub(false);
+  }, 200);
+}}
           >
-            <span className="cursor-pointer hover:text-white">
+            <button
+  onClick={() => setOpenAbout(!openAbout)}
+  className="cursor-pointer hover:text-white"
+>
               About Us ▾
-            </span>
+            </button>
 
             {openAbout && (
               <div className="absolute top-full left-0 w-64 z-50">
 
-                <div className="h-2"></div>
+                <div className="h-4"></div>
 
                 <div className="bg-white text-black rounded shadow-xl">
 
                   <ul className="py-2 text-sm">
 
-                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
-                      Welcome Message
+                    <li>
+                      <a
+                        href="/welcome-message"
+                        className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+                        >
+                        Welcome Message
+                      </a>
                     </li>
 
-                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Vision & Mission
                     </li>
 
-                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Organisation Chart
                     </li>
 
-                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+                    <li className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
                       Our Facilities
-                    </li>
+                      </li>
 
-                    <Link href="/aidex-prompters-community">
-                    <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
-                     AIDEx Prompters Community 
-                    </li>
-                    </Link>
+                      <li>
                     
-                    <li className="px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
-                      OWLx Prompters
-                    </li>
+                    <Link href="/aidex-prompters-community"
+                    className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
+
+                     AIDEx Prompters Community
+                     </Link>
+                     </li> 
+
+          
+  <a
+    href="/owlx-prompters"
+    className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+  >
+    OWLx Prompters
+  </a>
+          
 
                     {/* SUBMENU */}
                     <li
-                      className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center"
+                      className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center justify-between"
+                      style={{ pointerEvents: "auto" }}
                       onMouseEnter={() => setOpenSub(true)}
                       onMouseLeave={() => setOpenSub(false)}
                     >
                       Staff Directory <span>▸</span>
 
                       {openSub && (
-                        <div className="absolute top-0 left-full w-56 bg-white shadow-xl rounded">
+                        <div className="absolute top-0 left-full w-56 pl-2 z-[99999] pointer-events-none">
 
                           <div className="absolute left-[-6px] top-0 h-full w-2"></div>
 
@@ -148,16 +168,15 @@ export default function Navbar() {
 
           {/* AI TOOLS */}
            <div
-            className="relative pb-2"
+            className="relative"
             onMouseEnter={() => setOpenAITools(true)}
-            onMouseLeave={() => setOpenAITools(false)}
-          >
+            >
             <span className="cursor-pointer hover:text-white">
               AI Tools ▾
             </span>
 
             {openAITools && (
-              <div className="absolute top-full left-0 w-56 z-50">
+              <div className="absolute top-full left-0 w-56 z-[99999] pt-2">
 
                 {/* invisible hover bridge */}
                 <div className="absolute top-[-8px] left-0 w-full h-2"></div>
