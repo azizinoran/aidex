@@ -104,10 +104,11 @@ body {
 }
 
 .circle-btn .stat{
-  font-size:28px;
-  font-weight:800;
+  font-size:22px !important;
+  font-weight:700;
   color:#22d3ee;
-  margin-top:4px;
+  margin-top:6px;
+  line-height:1;
 }
 
 .circle-btn.purple{
@@ -122,4 +123,7 @@ body {
   box-shadow:
     0 0 60px rgba(192,132,252,0.5),
     inset 0 0 40px rgba(192,132,252,0.2);
+}
+.font-audiowide{
+  font-family: var(--font-audiowide);
 }
