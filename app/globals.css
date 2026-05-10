@@ -53,8 +53,8 @@ body {
   filter: drop-shadow(0 0 10px rgba(59,130,246,0.8));
 }
 .circle-btn{
-  width:220px;
-  height:220px;
+  width:200px;
+  height:200px;
   border-radius:9999px;
 
   position:absolute;

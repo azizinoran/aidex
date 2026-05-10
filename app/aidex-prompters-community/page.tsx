@@ -31,11 +31,9 @@ export default function AIDExPromptersCommunityPage() {
     <div className="absolute inset-0 rounded-full border border-cyan-400/20 animate-pulse"></div>
 
     <div className="text-center px-8">
-      <h1 className="text-5xl font-extrabold leading-tight text-white mb-4">
-        AIDEx <br />
-        <span className="text-cyan-400">Prompters</span> <br />
-        Community
-      </h1>
+      <h1 className="text-6xl font-extrabold text-white">
+  <span className="text-cyan-400">AIDEx</span>
+</h1>
 
       <p className="text-gray-300 text-sm leading-relaxed">
         A collaborative AI community for PMM students and staff
@@ -47,7 +45,7 @@ export default function AIDExPromptersCommunityPage() {
   </div>
 
   {/* TOP LEFT */}
-  <div className="absolute top-[5%] left-[18%] circle-btn">
+  <div className="absolute top-[8%] left-[18%] circle-btn">
     <div className="text-5xl">🤖</div>
     <h2>AI Prompt Sharing</h2>
   </div>
@@ -59,13 +57,13 @@ export default function AIDExPromptersCommunityPage() {
   </div>
 
   {/* LEFT */}
-  <div className="absolute left-[8%] top-[38%] circle-btn purple">
+  <div className="absolute left-[2%] top-[38%] circle-btn purple">
     <div className="text-5xl">🌐</div>
     <h2>Networking & Collaboration</h2>
   </div>
 
   {/* RIGHT */}
-  <div className="absolute right-[8%] top-[38%] circle-btn">
+  <div className="absolute right-[2%] top-[38%] circle-btn">
     <div className="text-5xl">👥</div>
     <h2>Community Members</h2>
     <p className="stat">500+</p>
