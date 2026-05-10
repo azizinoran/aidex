@@ -67,6 +67,7 @@ body {
 
   display:flex;
   flex-direction:column;
+  gap:6px;
 
   align-items:center;
   justify-content:center;
@@ -93,10 +94,11 @@ body {
 }
 
 .circle-btn h2{
-  font-size:24px;
-  font-weight:700;
-  margin-top:12px;
-  line-height:1.2;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .circle-btn p{

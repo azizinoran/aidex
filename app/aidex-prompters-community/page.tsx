@@ -1,3 +1,12 @@
+import {
+  Bot,
+  Rocket,
+  Globe,
+  Users,
+  BrainCircuit,
+  MessagesSquare,
+  } from "lucide-react";
+
 export default function AIDExPromptersCommunityPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
@@ -8,13 +17,13 @@ export default function AIDExPromptersCommunityPage() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-45"
       >
         <source src="/videos/community-bg.mp4" type="video/mp4" />
       </video>
 
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      <div className="absolute inset-0 bg-black/45 z-0"></div>
 
       {/* WEBSITE CONTENT */}
       <div className="relative z-10 min-h-screen px-6 py-20">
@@ -64,40 +73,46 @@ export default function AIDExPromptersCommunityPage() {
             </div>
 
             {/* TOP LEFT */}
-            <div className="absolute top-[12%] left-[24%] circle-btn">
-              <div className="text-5xl">🤖</div>
+            <div className="absolute top-[8%] left-[20%] circle-btn">
+              <Bot size={70} className="text-cyan-400 mb-4" />
               <h2>AI Prompt Sharing</h2>
             </div>
 
             {/* TOP RIGHT */}
-            <div className="absolute top-[12%] right-[24%] circle-btn">
-              <div className="text-5xl">🚀</div>
+            <div className="absolute top-[8%] right-[20%] circle-btn">
+              <Rocket size={70} className="text-pink-400 mb-4" />
               <h2>Workshops & Activities</h2>
             </div>
 
             {/* LEFT */}
-            <div className="absolute left-[12%] top-[40%] circle-btn purple">
-              <div className="text-5xl">🌐</div>
+            <div className="absolute left-[8%] top-[38%] circle-btn purple">
+              <Globe size={70} className="text-blue-400 mb-4" />
               <h2>Networking & Collaboration</h2>
             </div>
 
             {/* RIGHT */}
-            <div className="absolute right-[12%] top-[40%] circle-btn">
-              <div className="text-5xl">👥</div>
+            <div className="absolute right-[8%] top-[38%] circle-btn">
+              <Users size={70} className="text-purple-400 mb-4" />
               <h2>Community Members</h2>
               <p className="stat">500+</p>
             </div>
 
             {/* BOTTOM LEFT */}
-            <div className="absolute bottom-[12%] left-[24%] circle-btn">
-              <div className="text-5xl">🧠</div>
+            <div className="absolute bottom-[8%] left-[20%] circle-btn">
+              <BrainCircuit
+  size={70}
+  className="text-pink-400 mb-4 drop-shadow-[0_0_20px_rgba(236,72,153,0.8)]"
+/>
               <h2>AI Workshops</h2>
               <p className="stat">20+</p>
             </div>
 
             {/* BOTTOM RIGHT */}
-            <div className="absolute bottom-[12%] right-[24%] circle-btn purple">
-              <div className="text-5xl">💬</div>
+            <div className="absolute bottom-[8%] right-[20%] circle-btn purple">
+              <MessagesSquare
+  size={70}
+  className="text-violet-400 mb-4 drop-shadow-[0_0_20px_rgba(168,85,247,0.8)]"
+/>
               <h2>Shared Prompts</h2>
               <p className="stat">1000+</p>
             </div>
