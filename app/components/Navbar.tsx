@@ -210,7 +210,7 @@ export default function Navbar() {
 
                 
                   <a
-                    href="https://gemini.google.com/gem/1MQhQiuPfiBeKVcpPl-ozTN3O6e3y_1zo?usp=sharing"
+                    href="https://gemini.google.com/gem/1FVTbJcIpcuMwVfBpSfbob3LBjfQ2rnWy?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
