@@ -60,17 +60,16 @@ export default function Navbar() {
           <Link href="/" className="hover:text-white">Home</Link>
 
           {/* ABOUT */}
-          <div
-            className="relative"
-onMouseEnter={() => setOpenAbout(true)}
-
-onMouseLeave={() => {
-  setTimeout(() => {
-    setOpenAbout(false);
-    setOpenSub(false);
-  }, 200);
-}}
-          >
+<div
+  className="relative"
+  onMouseEnter={() => setOpenAbout(true)}
+  onMouseLeave={() => {
+    setTimeout(() => {
+      setOpenAbout(false);
+      setOpenSub(false);
+    }, 200);
+  }}
+>
             <button
   onClick={() => setOpenAbout(!openAbout)}
   className="cursor-pointer hover:text-white"
@@ -85,76 +84,101 @@ onMouseLeave={() => {
 
                 <div className="bg-white text-black rounded shadow-xl">
 
-                  <ul className="py-2 text-sm">
+                 <ul className="py-2 text-sm">
 
-                    <li>
-                      <a
-                        href="/welcome-message"
-                        className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
-                        >
-                        Welcome Message
-                      </a>
-                    </li>
+  <li>
+    <a
+      href="/welcome-message"
+      className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+    >
+      Welcome Message
+    </a>
+  </li>
 
-                    <li className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
-                      Vision & Mission
-                    </li>
+  <li>
+    <a
+      href="/vision-mission"
+      className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+    >
+      Vision & Mission
+    </a>
+  </li>
 
-                    <li className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
-                      Organisation Chart
-                    </li>
+  <li className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+    Organisation Chart
+  </li>
 
-                    <li className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
-                      Our Facilities
-                      </li>
+  <li className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+    Our Facilities
+  </li>
 
-                      <li>
-                    
-                    <Link href="/aidex-prompters-community"
-                    className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 cursor-pointer">
+  <li>
+    <Link
+      href="/aidex-prompters-community"
+      className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+    >
+      AIDEx Prompters Community
+    </Link>
+  </li>
 
-                     AIDEx Prompters Community
-                     </Link>
-                     </li> 
+  <li>
+    <a
+      href="/owlx-prompters"
+      className="block w-full px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+    >
+      OWLx Prompters
+    </a>
+  </li>
 
-          
-  <a
-    href="/owlx-prompters"
-    className="block w-full px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
+  {/* SUBMENU */}
+  <li
+    className="relative px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center justify-between"
+    onMouseEnter={() => setOpenSub(true)}
+    onMouseLeave={() => setOpenSub(false)}
   >
-    OWLx Prompters
-  </a>
-          
+    <span>Staff Directory</span>
+    <span>▸</span>
 
-                    {/* SUBMENU */}
-                    <li
-                      className="relative px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer flex items-center justify-between"
-                      style={{ pointerEvents: "auto" }}
-                      onMouseEnter={() => setOpenSub(true)}
-                      onMouseLeave={() => setOpenSub(false)}
-                    >
-                      Staff Directory <span>▸</span>
+    {openSub && (
 
-                      {openSub && (
-                        <div className="absolute top-0 left-full w-56 pl-2 z-[99999] pointer-events-none">
+      <div className="absolute top-0 left-full w-56 pl-2 z-[99999]">
 
-                          <div className="absolute left-[-6px] top-0 h-full w-2"></div>
+        <div className="bg-white rounded shadow-xl">
 
-                          <ul className="py-2 text-sm text-black">
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Management Staff</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Creative Multimedia</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Development & Technology</li>
-                            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">Support Staff</li>
-                          </ul>
-                        </div>
-                      )}
-                    </li>
+          <ul className="py-2 text-sm text-black">
 
-                  </ul>
+            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+              Management Staff
+            </li>
+
+            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+              Creative Multimedia
+            </li>
+
+            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+              Development & Technology
+            </li>
+
+            <li className="px-4 py-2 hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer">
+              Support Staff
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    )}
+
+  </li>
+
+</ul>
                 </div>
-              </div>
+             </div> 
             )}
-          </div>
+          
+            </div>
 
           {/* CERTIFICATIONS */}
           <span className="flex items-center gap-1 whitespace-nowrap cursor-pointer hover:text-white">
@@ -170,6 +194,7 @@ onMouseLeave={() => {
            <div
             className="relative"
             onMouseEnter={() => setOpenAITools(true)}
+            onMouseLeave={() => setOpenAITools(false)}
             >
             <span className="cursor-pointer hover:text-white">
               AI Tools ▾
@@ -185,12 +210,12 @@ onMouseLeave={() => {
 
                 
                   <a
-                    href="https://gemini.google.com/gem/1jRl4IIIlvR1MnoVSP_3XoIrOkeFR8Dry?usp=sharing"
+                    href="https://gemini.google.com/gem/1MQhQiuPfiBeKVcpPl-ozTN3O6e3y_1zo?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 text-black hover:bg-gray-100 hover:text-cyan-500 transition cursor-pointer"
                   >
-                    AIDEx AppForge AI
+                    AIDEx Smartools
                   </a>
 
                 </div>
@@ -225,10 +250,10 @@ onMouseLeave={() => {
           <button className="bg-gradient-to-r from-blue-500 to-purple-500 px-4 py-2 rounded-lg text-sm shadow-lg hover:scale-105 transition">
             Join Now
           </button>
+          </div>
 
         </div>
 
-      </div>
-    </nav>
+          </nav>
   );
-}
+  }
